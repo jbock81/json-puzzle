@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><?php echo $SITE_NAME; ?></title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main" id="main-site">
+        <!-- START :: MAGIC SQUARE -->
+        <div class="magic-squre-part">
+			<input type="hidden" id="mhtml" name="mhtml" value="<?php echo $masterpage; ?>">
+            <div class="magic-squre-part-left-side-main" id="puzzle_content">
+                <div class="magic-squre-part-desc-dtl">
+                    <div class="magic-squre-part-main-sub-dtl">
+                        <div class="magic-squre-part-head">
+                        <div class="magic-squre-pic">
+                            <img src="images/LoadingPageFLATNoise.jpg">
+                        </div>
+						
+                    </div>
+                </div>
+            </div>
+			<?php include('right-side-menu.php'); ?>
+			
+        </div>
+		
+        <!-- END :: MAGIC SQUARE -->
+    </div>
+	<?
+	$ab = "masterid".$mid;
+	$ab2 = "master".$mid;
+	
+	?>
+	<input type="hidden" name="ses2" id="ses2" value="<?php echo $_SESSION[$ab2]; ?>">
+	<input type="hidden" name="ses" id="ses" value="<?php echo $mid; ?>">
+    <script src="js/jquery.min.js"></script>
+</body>
+</html>
